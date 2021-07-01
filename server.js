@@ -1,4 +1,5 @@
 const express = require('express');
+const mysql = require('mysql2');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -7,13 +8,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.json({
-    message: "Hello World"
-  });
-});
-
-// Default response for any other request (NOt found)
+// Default response for any other request (Not found)
 app.use((req, res) => {
   res.status(404).end();
 });
