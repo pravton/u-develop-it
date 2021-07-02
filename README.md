@@ -27,8 +27,19 @@ npm install
 
 ## 🖥️ Usage
 
-To use this app please create the database using mySql / change the password in connection.js and run the following command to start the server 
+To use this app install mysql server > start the server and run the following commands
 
+```
+source db.sql
+source db/schema.sql
+soruce db/seeds.sql
+```
+
+Change the password in connection.js and run the following command to start the server
+
+```
+npm start
+```
 
 
 ## 📝 License
